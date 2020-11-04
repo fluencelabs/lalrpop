@@ -10,11 +10,13 @@ impl<'a> fmt::Display for Token<'a> {
     }
 }
 
+#[derive(Clone)]
 struct RegexEntry {
     regex: regex::Regex,
     skip: bool,
 }
 
+#[derive(Clone)]
 pub struct MatcherBuilder {
     regex_set: regex::RegexSet,
     regex_vec: Vec<RegexEntry>,
