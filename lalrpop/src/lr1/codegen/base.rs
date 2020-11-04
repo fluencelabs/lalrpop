@@ -236,6 +236,7 @@ impl<'codegen, 'grammar, W: Write, C> CodeGenerator<'codegen, 'grammar, W, C> {
             }
         }
 
+        rust!(self.out, "#[derive(Clone)]");
         rust!(
             self.out,
             "{}struct {}Parser {{",
